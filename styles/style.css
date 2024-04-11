@@ -487,3 +487,20 @@
     box-shadow: 0px 10px 20px #C89B3C;
     transition: box-shadow 0.9s ease;
 }
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+      max-width: 120px;
+    }
+
+    .space{
+        margin-top: 220px;
+    }
+  
+    .item {
+      width: 100%;
+      margin-right: 4%;
+      margin-left: 4%;
+      flex-wrap: wrap;
+    }
+}  
