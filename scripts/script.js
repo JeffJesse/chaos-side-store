@@ -11,6 +11,40 @@ function compraSFX() {
     sfx.play();
 }
 
+function pagoSFX(){
+    const pagoSFX = new Audio('resources/questionb.mp3');
+    pagoSFX.play();
+}
+
+const pagarCarrito = document.querySelector('.pagarCarrito');
+const confirmacionCompra = document.querySelector('.confirmacion-compra');
+const cancelarCompra = document.querySelector('.cancelar-compra');
+const procederCompra = document.querySelector('.proceder-compra');
+
+pagarCarrito.addEventListener('click', () => {
+  pagoSFX();
+  confirmacionCompra.style.display = 'block';
+});
+
+cancelarCompra.addEventListener('click', () => {
+  confirmacionCompra.style.display = 'none';
+});
+
+procederCompra.addEventListener('click', () => {
+  
+  if (contenidoCarrito.length==0) {
+    alert('CARRITO VACÍO, ELIGE ALGO INVOCADOR.');
+    confirmacionCompra.style.display = 'none';
+    return;
+  }
+  confirmacionCompra.style.display = 'none';
+  alert('¡COMPRA REALIZADA, UNA ELECCIÓN SABIA!');
+
+  contenidoCarrito = [];
+  agregProduCarrito();
+  memoriaSobreCarrito();
+});
+
 let listaProductos = [];
 let contenidoCarrito = [];
 
