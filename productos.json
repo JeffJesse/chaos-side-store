@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "name": "Espada de Doran",
+        "price": 450,
+        "image": "resources/espadaDoran.webp"
+    },
+    {
+        "id": 2,
+        "name": "Escudo de Doran",
+        "price": 450,
+        "image": "resources/escudoDoran.webp"
+    },
+    {
+        "id": 3,
+        "name": "Anillo de Doran",
+        "price": 400,
+        "image": "resources/anilloDoran.webp"
+    },
+    {
+        "id": 4,
+        "name": "Poción de vida",
+        "price": 50,
+        "image": "resources/pocionVida.webp"
+    },
+    {
+        "id": 5,
+        "name": "Centinela de control",
+        "price": 75,
+        "image": "resources/centinelaControl.webp"
+    },
+    {
+        "id": 6,
+        "name": "Poción reutilizable",
+        "price": 150,
+        "image": "resources/pocionReutilizable.webp"
+    },
+    {
+        "id": 7,
+        "name": "Centinela sigiloso",
+        "price": 1,
+        "image": "resources/centinela.webp"
+    },
+    {
+        "id": 8,
+        "name": "Lente del oráculo",
+        "price": 10,
+        "image": "resources/oraculo.webp"
+    },
+    {
+        "id": 9,
+        "name": "Alteración de visión lejana",
+        "price": 20,
+        "image": "resources/alteracionVision.webp"
+    }
+]
