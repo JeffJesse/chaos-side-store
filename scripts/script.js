@@ -5,22 +5,24 @@ let listaProductosHTML = document.querySelector('.listProduct');
 let listaCarritoHTML = document.querySelector('.contenido-carrito');
 let numProdCarrito = document.querySelector('.nav-links span');
 let costoTotalProductos = document.querySelector('.costo-total-productos span');
+let pagarCarrito = document.querySelector('.pagarCarrito');
+let confirmacionCompra = document.querySelector('.confirmacion-compra');
+let cancelarCompra = document.querySelector('.cancelar-compra');
+let procederCompra = document.querySelector('.proceder-compra');
 
+//Sonido para cuando realizas una compra - caracter estetico
 function compraSFX() {
     const sfx = new Audio('resources/lolsfxcompra.mp3');
     sfx.play();
 }
 
+//Sonido para cuando clickeas pagar - caracter estetico
 function pagoSFX(){
     const pagoSFX = new Audio('resources/questionb.mp3');
     pagoSFX.play();
 }
 
-const pagarCarrito = document.querySelector('.pagarCarrito');
-const confirmacionCompra = document.querySelector('.confirmacion-compra');
-const cancelarCompra = document.querySelector('.cancelar-compra');
-const procederCompra = document.querySelector('.proceder-compra');
-
+// 1.1 EVENTOS DE LOS BOTONES DENTRO DEL CARRITO
 pagarCarrito.addEventListener('click', () => {
   pagoSFX();
   confirmacionCompra.style.display = 'block';
@@ -44,7 +46,9 @@ procederCompra.addEventListener('click', () => {
   agregProduCarrito();
   memoriaSobreCarrito();
 });
+// FINAL DE 1.1
 
+// 1.2 INICIO DE LAS FUNCIONES PARA LA CREACION Y USO DEL CARRITO
 let listaProductos = [];
 let contenidoCarrito = [];
 
@@ -177,6 +181,7 @@ const cambiarCantProductos = (producto_id, accion) => {
     memoriaSobreCarrito();
     agregProduCarrito();
 }
+// FIN 1.2
 
 const mandarDatosJSON = () => {
     fetch('productos.json')

@@ -61,33 +61,6 @@
     cursor: url('/resources/link.cur'), auto;
 }
 
-.carrito{
-    position: relative;
-    display: flex;
-    align-items: center;
-    margin-left: 20px;
-    justify-content: center;
-}
-
-.carrito svg{
-    width: 50px;
-    height: 50px;
-    color: #AB8535;
-}
-
-.carrito span{
-    display: flex;
-    width: 20px;
-    height: 20px;
-    background-color: #005A82;
-    justify-content: center;
-    color: #F0E6D2;
-    border-radius: 50%;
-    position: absolute;
-    top: 60%;
-    left: 30px;
-}
-
 .navigation a::before{
     content: '';
     position: absolute;
@@ -102,6 +75,13 @@
     width: 100%;
 }
 
+/* Espacio entre navegador y seccion de nosotros, con el fin de que el nav-bar no tape nada*/
+.space{
+    margin-top: 150px;
+}
+/* Fin del espacio */
+
+/* 1 - Estilo para la sección de nosotros*/
 .img-principal{
     position: relative;
     max-width: 500px;
@@ -148,7 +128,9 @@
     padding-bottom: 30px;
     margin-top: 20px;
 }
+/* FIN - 1*/
 
+/* 1.1 - Estilos para mostrar los productos más relevantes */
 .imagen-tienda img{
     display: block;
     max-width: 100%;
@@ -238,6 +220,38 @@
     background-color: #005A82;
 }
 
+/* Fin - 1.1 */
+
+/* 1.2 Estilos para del icono del carrito y el contador de productos */
+.carrito{
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    justify-content: center;
+}
+
+.carrito svg{
+    width: 50px;
+    height: 50px;
+    color: #AB8535;
+}
+
+.carrito span{
+    display: flex;
+    width: 20px;
+    height: 20px;
+    background-color: #005A82;
+    justify-content: center;
+    color: #F0E6D2;
+    border-radius: 50%;
+    position: absolute;
+    top: 60%;
+    left: 30px;
+}
+/* FIN 1.2 */
+
+/* 1.3 Estilos para la ventana del carrito (contiene los productos, precio y dos botones)*/
 .ventana-carrito{
     display: none;
 }
@@ -351,7 +365,9 @@
 .contenido-carrito::-webkit-scrollbar{
     width: 0;
 }
+/* FIN 1.3 */
 
+/* Estilos para el footer 1.4 */
 .footer {
     position: relative;
     width: 100%;
@@ -415,11 +431,9 @@
     color: #bb9335;
     background-color: #207287;
 }
+/* FIN 1.4 */
 
-.space{
-    margin-top: 150px;
-}
-
+/* 1.5 Estilos para los productos dentro del STORE.HTML */
 .listProduct .item img{
     width: 90%;
     display: block;
@@ -529,6 +543,7 @@
     cursor: url('/resources/link.cur'), auto;
   }
 
+/* Seccion responsive */
 @media (min-width: 768px) and (max-width: 991px) {
     .container {
       max-width: 120px;
